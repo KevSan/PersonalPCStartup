@@ -19,6 +19,7 @@ password_field.send_keys(password)
 time.sleep(5)
 driver.find_element_by_xpath('/html/body/div[4]/div[2]/div[1]/div[2]/div[1]/div/div/form/button').send_keys("\n")
 
+# opens a new tab
 driver.execute_script("window.open('');")
 
 
