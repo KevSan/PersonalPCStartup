@@ -9,3 +9,7 @@ b) Google Play Music
 c) Youtube 
 d) TD Bank
 e) Capital One 
+
+https://nitratine.net/blog/post/encryption-and-decryption-in-python/
+
+I will use the above to store my passwords 
