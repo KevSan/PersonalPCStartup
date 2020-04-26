@@ -25,4 +25,3 @@ with open('keys.secrets', 'rb') as file_object:
         dict = line
 
 print(dict)
-

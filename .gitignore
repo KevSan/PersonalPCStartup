@@ -1,5 +1,5 @@
 .secrets
 .idea/inspectionProfiles/
 keys.secrets
-!/key_generator.py
 __pycache__/
+!/key_generator.py
