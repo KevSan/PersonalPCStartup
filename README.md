@@ -10,6 +10,4 @@ c) Youtube
 d) TD Bank
 e) Capital One 
 
-https://nitratine.net/blog/post/encryption-and-decryption-in-python/
-
-I will use the above to store my passwords 
+Created the code that will retrieve and decrypt credentials 
