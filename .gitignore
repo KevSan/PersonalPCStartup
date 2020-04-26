@@ -2,4 +2,6 @@
 .idea/inspectionProfiles/
 keys.secrets
 __pycache__/
-!/key_generator.py
+key_generator.py
+test.py
+
