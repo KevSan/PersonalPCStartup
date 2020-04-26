@@ -5,7 +5,7 @@ import ast
 
 # TODO include proper commenting to code base
 def retrieve_username_and_password(env_var, secrets, source):
-    key = get_key(env_var)
+    key = get_key(env_var, source)
     cred_bytes = get_credentials(secrets)
     cred_dict_str = cred_bytes.decode("UTF-8")
     cred_dict = ast.literal_eval(cred_dict_str)
@@ -14,8 +14,8 @@ def retrieve_username_and_password(env_var, secrets, source):
     return user_name, password
 
 
-def get_key(env_var):
-    path = os.getenv(env_var) + 'pc_startup.txt'
+def get_key(env_var, source):
+    path = os.getenv(env_var) + source + '_key.txt'
     with open(path, 'r') as f:
         for line in f:
             key = line

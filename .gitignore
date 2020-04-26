@@ -3,5 +3,4 @@
 keys.secrets
 __pycache__/
 key_generator.py
-test.py
 
