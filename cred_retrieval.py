@@ -15,7 +15,7 @@ def retrieve_username_and_password(env_var, secrets, source):
 
 
 def get_key(env_var, source):
-    path = os.getenv(env_var) + source + '_key.txt'
+    path = os.getenv(env_var) + source + '_key'
     with open(path, 'r') as f:
         for line in f:
             key = line

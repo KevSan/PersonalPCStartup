@@ -7,7 +7,6 @@ Websites:
 a) Gmail
 b) Google Play Music
 c) Youtube 
-d) TD Bank
-e) Capital One 
+d) C1 
 
 Created the code that will retrieve and decrypt credentials 

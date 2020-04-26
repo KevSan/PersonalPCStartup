@@ -3,8 +3,10 @@ from selenium.webdriver.common.keys import Keys
 import time
 import cred_retrieval
 
-
-driver = webdriver.Chrome()
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_experimental_option("useAutomationExtension", False)
+chrome_options.add_experimental_option("excludeSwitches", ['enable-automation'])
+driver = webdriver.Chrome(options=chrome_options)
 driver.get("https://onlinebanking.tdbank.com/#/authentication/login")
 
 user_name, password = cred_retrieval.retrieve_username_and_password('keys_path', 'keys.secrets', 'td')
@@ -19,4 +21,4 @@ password_field.send_keys(password)
 time.sleep(5)
 driver.find_element_by_xpath('/html/body/div[4]/div[2]/div[1]/div[2]/div[1]/div/div/form/button').send_keys("\n")
 # opens a new tab
-driver.execute_script("window.open('https://www.capitalone.com/');")
+#driver.execute_script("window.open('https://www.capitalone.com/');")
