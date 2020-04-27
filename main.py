@@ -3,22 +3,24 @@ from selenium.webdriver.common.keys import Keys
 import time
 import cred_retrieval
 
+user_name, password = cred_retrieval.retrieve_username_and_password('keys_path', 'keys.secrets', 'google')
+
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("useAutomationExtension", False)
 chrome_options.add_experimental_option("excludeSwitches", ['enable-automation'])
 driver = webdriver.Chrome(options=chrome_options)
-driver.get("https://onlinebanking.tdbank.com/#/authentication/login")
+driver.get("https://www.google.com/")
 
-user_name, password = cred_retrieval.retrieve_username_and_password('keys_path', 'keys.secrets', 'td')
+time.sleep(5)
 
-user_name_field = driver.find_element_by_id('formElement_0')
+user_name_field = driver.find_element_by_id('')
 user_name_field.send_keys(user_name)
 
-password_field = driver.find_element_by_id('formElement_1')
+password_field = driver.find_element_by_id('')
 password_field.send_keys(password)
 
 # TODO create this to be a class that gets reused by each site
 time.sleep(5)
-driver.find_element_by_xpath('/html/body/div[4]/div[2]/div[1]/div[2]/div[1]/div/div/form/button').send_keys("\n")
+driver.find_element_by_id('noAcctSubmit').send_keys("\n")
 # opens a new tab
 #driver.execute_script("window.open('https://www.capitalone.com/');")
