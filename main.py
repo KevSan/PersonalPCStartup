@@ -13,8 +13,16 @@ driver.get("https://www.google.com/")
 
 time.sleep(5)
 
-user_name_field = driver.find_element_by_id('')
+driver.find_element_by_id("gb_70").click()
+
+time.sleep(5)
+
+user_name_field = driver.find_element_by_xpath('//*[@id="identifierId"]')
 user_name_field.send_keys(user_name)
+
+time.sleep(2)
+
+driver.find_element_by_id('identifierNext').click()
 
 password_field = driver.find_element_by_id('')
 password_field.send_keys(password)

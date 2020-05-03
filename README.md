@@ -9,4 +9,5 @@ b) Google Play Music
 c) Youtube 
 d) C1 
 
-Created the code that will retrieve and decrypt credentials 
+Trying to connect to gmail doesn't work because Google's security feature prevents it. Will try controlling
+a pre existing window and firefox next. 
